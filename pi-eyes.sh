@@ -152,11 +152,11 @@ pip3 install numpy pi3d==2.34 svg.path rpi-gpio adafruit-blinka adafruit-circuit
 
 echo "Installing Shoku fork of Adafruit code and data in /boot..."
 cd /tmp
-curl -LO https://github.com/SnowsongWolf/Pi_Eyes/archive/master.zip
-unzip master.zip
+curl -LO https://github.com/SnowsongWolf/Pi_Eyes/archive/refs/tags/v1.0.zip
+unzip v1.0.zip
 # Moving between filesystems requires copy-and-delete:
-cp -r Pi_Eyes-master /boot/Pi_Eyes
-rm -rf master.zip Pi_Eyes-master
+cp -r Pi_Eyes-1.0 /boot/Pi_Eyes
+rm -rf v1.0.zip Pi_Eyes-1.0
 if [ $INSTALL_HALT -ne 0 ]; then
 	echo "Installing gpio-halt in /usr/local/bin..."
 	curl -LO https://github.com/adafruit/Adafruit-GPIO-Halt/archive/master.zip

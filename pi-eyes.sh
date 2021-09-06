@@ -150,9 +150,9 @@ pip3 install numpy pi3d==2.34 svg.path rpi-gpio adafruit-blinka adafruit-circuit
 # smbus and Blinka+ADC libs are installed regardless whether ADC is
 # enabled; simplifies the Python code a little (no "uncomment this")
 
-echo "Installing Adafruit code and data in /boot..."
+echo "Installing Shoku fork of Adafruit code and data in /boot..."
 cd /tmp
-curl -LO https://github.com/adafruit/Pi_Eyes/archive/master.zip
+curl -LO https://github.com/SnowsongWolf/Pi_Eyes/archive/master.zip
 unzip master.zip
 # Moving between filesystems requires copy-and-delete:
 cp -r Pi_Eyes-master /boot/Pi_Eyes
